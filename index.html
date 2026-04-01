@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ótica Conselheiro | Visagismo Óptico e Alta Tecnologia em Curitiba</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#050505',
+                        surface: '#0a0a0a',
+                        gold: {
+                            DEFAULT: '#D4AF37',
+                            light: '#F3E5AB',
+                            dark: '#AA8C2C'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Playfair Display', 'serif'],
+                        cursive: ['Dancing Script', 'cursive'],
+                    },
+                    letterSpacing: {
+                        tightest: '-.04em',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS for Marquee and Utilities -->
+    <style>
+        body {
+            background-color: #050505;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        
+        ::selection {
+            background-color: #D4AF37;
+            color: #050505;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .marquee-container {
+            display: flex;
+            overflow: hidden;
+            user-select: none;
+            gap: 2rem;
+        }
+
+        .marquee-content {
+            flex-shrink: 0;
+            display: flex;
+            justify-content: space-around;
+            min-width: 100%;
+            gap: 2rem;
+            animation: scroll 20s linear infinite;
+        }
+
+        @keyframes scroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(calc(-100% - 2rem)); }
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #ffffff, #a3a3a3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .text-outline {
+            text-shadow: 
+                -1px -1px 0 #000,  
+                 1px -1px 0 #000,
+                -1px  1px 0 #000,
+                 1px  1px 0 #000,
+                 0px  4px 15px rgba(0,0,0,0.8);
+        }
+
+        .text-outline-filter {
+            filter: drop-shadow(1px 1px 0 #000) drop-shadow(-1px -1px 0 #000) drop-shadow(1px -1px 0 #000) drop-shadow(-1px 1px 0 #000) drop-shadow(0px 4px 10px rgba(0,0,0,0.8));
+        }
+
+        .gold-gradient {
+            background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA8C2C 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hover-scale {
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .bento-card:hover .hover-scale {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-gold selection:text-dark">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass-panel border-b-0" id="header">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3">
+                <span class="font-cursive text-3xl tracking-wide text-gold text-outline">
+                    Ótica Conselheiro CWB.
+                </span>
+                <img src="https://drive.google.com/thumbnail?id=1P_WCgbHIs9RCbFHlk2cpjvciQlFT0xK0&sz=w800" alt="Logo Ótica Conselheiro CWB" class="h-20 w-20 md:h-24 md:w-24 object-cover rounded-full border-2 border-gold" referrerpolicy="no-referrer" />
+            </a>
+            <nav class="hidden md:flex gap-8 text-sm font-medium tracking-widest uppercase text-white/90">
+                <a href="#diferenciais" class="hover:text-gold transition-colors text-outline">Diferenciais</a>
+                <a href="#servicos" class="hover:text-gold transition-colors text-outline">Serviços</a>
+                <a href="#depoimentos" class="hover:text-gold transition-colors text-outline">Depoimentos</a>
+                <a href="#localizacao" class="hover:text-gold transition-colors text-outline">Localização</a>
+            </nav>
+            <a href="https://wa.me/554196314238" target="_blank" class="group relative px-6 py-3 text-sm font-medium tracking-widest uppercase overflow-hidden border border-gold/50 rounded-full hover:border-gold transition-colors">
+                <span class="relative z-10 text-gold group-hover:text-dark transition-colors duration-300 text-outline">Agendar Visita</span>
+                <div class="absolute inset-0 bg-gold translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0 bg-dark">
+            <img src="https://drive.google.com/thumbnail?id=1HKn8cJo_TKg0iRs_iiNdyFlHKG6RvOTZ&sz=w1920" alt="Ótica Conselheiro" class="w-full h-full object-cover object-center opacity-100" referrerpolicy="no-referrer" />
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-dark/30 to-dark"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center mt-20">
+            <p class="hero-elem text-gold text-sm md:text-base font-medium tracking-[0.3em] uppercase mb-6 text-outline">SAÚDE VISUAL &amp; ESTÉTICA</p>
+            <h1 class="hero-elem font-display text-5xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tightest mb-8 text-gradient text-outline-filter">
+                A harmonia perfeita <br>
+                <span class="italic font-light text-white/80">entre visão e estética.</span>
+            </h1>
+            <p class="hero-elem text-lg md:text-xl text-white/90 font-light max-w-2xl mx-auto mb-12 leading-relaxed text-outline">
+                Descubra o poder do Visagismo Óptico. Curadoria exclusiva de armações e lentes de alta tecnologia no coração de Curitiba.
+            </p>
+            <div class="hero-elem flex flex-col sm:flex-row items-center justify-center gap-6">
+                <a href="https://wa.me/554196314238" target="_blank" class="px-8 py-4 bg-gold text-dark font-medium tracking-widest uppercase text-sm rounded-full hover:bg-gold-light transition-colors duration-300 shadow-[0_0_30px_rgba(212,175,55,0.3)]">
+                    Agendar Consultoria
+                </a>
+                <a href="#diferenciais" class="px-8 py-4 text-white font-medium tracking-widest uppercase text-sm border-b border-white/30 hover:border-white transition-colors duration-300">
+                    Conhecer a Ótica
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Authority Marquee -->
+    <div class="py-8 border-y border-white/5 bg-surface/50 backdrop-blur-sm relative z-20">
+        <div class="marquee-container">
+            <div class="marquee-content text-sm md:text-base font-display italic tracking-wider text-white/50">
+                <span>Avaliação 5.0 no Google</span>
+                <span class="text-gold">•</span>
+                <span>Visagismo Óptico Exclusivo</span>
+                <span class="text-gold">•</span>
+                <span>Lentes de Alta Tecnologia</span>
+                <span class="text-gold">•</span>
+                <span>Atendimento Humanizado</span>
+                <span class="text-gold">•</span>
+            </div>
+            <div class="marquee-content text-sm md:text-base font-display italic tracking-wider text-white/50" aria-hidden="true">
+                <span>Avaliação 5.0 no Google</span>
+                <span class="text-gold">•</span>
+                <span>Visagismo Óptico Exclusivo</span>
+                <span class="text-gold">•</span>
+                <span>Lentes de Alta Tecnologia</span>
+                <span class="text-gold">•</span>
+                <span>Atendimento Humanizado</span>
+                <span class="text-gold">•</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Diferenciais (Bento Grid) -->
+    <section id="diferenciais" class="py-32 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-20 reveal">
+            <h2 class="font-display text-4xl md:text-5xl tracking-tight mb-4">A assinatura <span class="italic text-gold">Conselheiro</span></h2>
+            <p class="text-white/50 font-light max-w-xl mx-auto">Muito além de uma ótica. Um ateliê de visão onde cada detalhe é pensado para valorizar a sua imagem pessoal.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 auto-rows-[320px]">
+            
+            <!-- Bento Item 1: Visagismo (Large) -->
+            <div class="bento-card reveal md:col-span-2 lg:col-span-2 lg:row-span-2 relative rounded-3xl overflow-hidden group cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?q=80&w=1000&auto=format&fit=crop" alt="Visagismo Óptico" class="absolute inset-0 w-full h-full object-cover hover-scale opacity-70">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-transparent"></div>
+                <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                    <span class="text-gold text-xs font-bold tracking-[0.2em] uppercase mb-3">Consultoria Especializada</span>
+                    <h3 class="font-display text-3xl md:text-4xl mb-3">Visagismo Óptico</h3>
+                    <p class="text-white/70 font-light text-sm md:text-base max-w-md">Nossa especialista Fran analisa as linhas do seu rosto, proporções e coloração pessoal para encontrar a armação que traduz a sua verdadeira essência.</p>
+                </div>
+            </div>
+
+            <!-- Bento Item 2: Curadoria -->
+            <div class="bento-card reveal md:col-span-1 lg:col-span-2 relative rounded-3xl overflow-hidden glass-panel group cursor-pointer">
+                <div class="absolute top-0 right-0 p-6 opacity-20 group-hover:opacity-40 transition-opacity">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="text-gold"><path d="M2 12h20M12 2v20M17 7l-10 10M7 7l10 10"/></svg>
+                </div>
+                <div class="absolute inset-0 p-8 flex flex-col justify-center">
+                    <h3 class="font-display text-2xl mb-3">Curadoria de Design</h3>
+                    <p class="text-white/60 font-light text-sm">Armações exclusivas selecionadas a dedo, incluindo nossa marca própria, Capy.co. Unimos conforto absoluto, durabilidade e as últimas tendências da estética facial.</p>
+                </div>
+            </div>
+
+            <!-- Bento Item 3: Tecnologia -->
+            <div class="bento-card reveal md:col-span-1 lg:col-span-1 relative rounded-3xl overflow-hidden group cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1577803645773-f96470509666?q=80&w=800&auto=format&fit=crop" alt="Lentes" class="absolute inset-0 w-full h-full object-cover hover-scale opacity-50">
+                <div class="absolute inset-0 bg-dark/60 group-hover:bg-dark/40 transition-colors"></div>
+                <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                    <h3 class="font-display text-2xl mb-2">Alta Tecnologia</h3>
+                    <p class="text-white/60 font-light text-sm">Lentes de grau com precisão milimétrica para a máxima acuidade visual, com o técnico responsável sempre à disposição na loja.</p>
+                </div>
+            </div>
+
+            <!-- Bento Item 4: Atendimento -->
+            <div class="bento-card reveal md:col-span-2 lg:col-span-1 relative rounded-3xl overflow-hidden glass-panel group cursor-pointer flex flex-col justify-center items-center text-center p-8">
+                <div class="w-16 h-16 rounded-full bg-gold/10 flex items-center justify-center mb-6">
+                    <span class="font-display text-gold text-2xl italic">5.0</span>
+                </div>
+                <h3 class="font-display text-xl mb-2">Atendimento Humanizado</h3>
+                <p class="text-white/60 font-light text-sm">Raphael Bizinelli e Francieli Bizinelli proporcionam uma experiência acolhedora e dedicada, unindo o melhor do cuidado visual a um preço justo e transparente.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sobre / Serviços -->
+    <section id="servicos" class="py-32 relative border-t border-white/5 bg-surface">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal order-2 lg:order-1 relative">
+                    <div class="aspect-[4/5] rounded-3xl overflow-hidden">
+                        <img src="https://drive.google.com/thumbnail?id=15Xy_7d0hBgRyJsDBRsKVBMCCbBvHU4uo&sz=w1000" alt="Serviços Ótica" class="w-full h-full object-cover" referrerpolicy="no-referrer">
+                    </div>
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-8 -right-8 glass-panel p-6 rounded-2xl max-w-xs hidden md:block">
+                        <p class="font-display italic text-lg text-white/90">"A melhor ótica do centro. Me ajudaram consertando a perna do meu óculos. Muito educados!"</p>
+                        <p class="text-gold text-xs tracking-widest uppercase mt-4">— André Luis</p>
+                    </div>
+                </div>
+                
+                <div class="reveal order-1 lg:order-2">
+                    <span class="text-gold text-xs font-bold tracking-[0.2em] uppercase mb-4 block">Nossa Expertise</span>
+                    <h2 class="font-display text-4xl md:text-5xl tracking-tight mb-8">Cuidado integral com a <span class="italic text-white/70">sua visão.</span></h2>
+                    <p class="text-white/60 font-light text-lg mb-10 leading-relaxed">
+                        Localizada na Rua Conselheiro Araújo, nossa ótica é um espaço dedicado à excelência. Com atendimento personalizado conduzido por Raphael Bizinelli (Técnico Responsável) e Francieli Bizinelli (Visagismo Óptico), não apenas vendemos óculos; nós cuidamos da sua saúde visual e garantimos que seu acessório seja uma extensão da sua personalidade.
+                    </p>
+                    
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <div class="w-6 h-6 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0 mt-1">
+                                <div class="w-2 h-2 rounded-full bg-gold"></div>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-lg mb-1">Manutenção e Consertos</h4>
+                                <p class="text-white/50 font-light text-sm">Ajustes de armações, troca de plaquetas, limpeza profunda e reparos em geral.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-6 h-6 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0 mt-1">
+                                <div class="w-2 h-2 rounded-full bg-gold"></div>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-lg mb-1">Óculos de Sol Premium</h4>
+                                <p class="text-white/50 font-light text-sm">Proteção UV aliada ao design sofisticado para o seu dia a dia.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-6 h-6 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0 mt-1">
+                                <div class="w-2 h-2 rounded-full bg-gold"></div>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-lg mb-1">Agilidade na Entrega</h4>
+                                <p class="text-white/50 font-light text-sm">Compromisso com o seu tempo. Entregas frequentemente realizadas rapidamente.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="py-32 px-6 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 reveal">
+            <div class="max-w-2xl">
+                <h2 class="font-display text-4xl md:text-5xl tracking-tight mb-4">O que dizem <br><span class="italic text-gold">nossos clientes</span></h2>
+            </div>
+            <div class="mt-6 md:mt-0 flex items-center gap-4">
+                <div class="flex -space-x-3">
+                    <div class="w-10 h-10 rounded-full bg-white/10 border-2 border-dark"></div>
+                    <div class="w-10 h-10 rounded-full bg-white/20 border-2 border-dark"></div>
+                    <div class="w-10 h-10 rounded-full bg-white/30 border-2 border-dark"></div>
+                </div>
+                <div class="text-sm font-light text-white/60">
+                    <span class="text-white font-medium">5.0</span> (39 avaliações)
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Review 1 -->
+            <div class="glass-panel p-8 rounded-3xl reveal">
+                <div class="flex text-gold mb-6 gap-1">
+                    ★★★★★
+                </div>
+                <p class="text-white/80 font-light text-sm leading-relaxed mb-8">"Fiz meus óculos na ótica Conselheiro Cwb e tive uma excelente experiência. As armações são lindas e de muita qualidade, os preços são justos e o atendimento é realmente diferenciado. Fui muito bem atendida do início ao fim."</p>
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold to-dark flex items-center justify-center text-sm font-display">B</div>
+                    <div>
+                        <h5 class="font-medium text-sm">Barbara Mathuchenko</h5>
+                        <span class="text-white/40 text-xs">Cliente</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="glass-panel p-8 rounded-3xl reveal" style="transition-delay: 100ms;">
+                <div class="flex text-gold mb-6 gap-1">
+                    ★★★★★
+                </div>
+                <p class="text-white/80 font-light text-sm leading-relaxed mb-8">"A melhor ótica de Curitiba… Os donos Rafael e a Fran, atendem super bem, as armações e as lentes são lindas e de qualidade!! A Fran faz visagismo, ajudando na melhor armação para seu rosto e cores que valoriza sua imagem. Sou cliente deles há anos."</p>
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold to-dark flex items-center justify-center text-sm font-display">F</div>
+                    <div>
+                        <h5 class="font-medium text-sm">Flávia Ramos Duarte</h5>
+                        <span class="text-white/40 text-xs">Cliente há anos</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="glass-panel p-8 rounded-3xl reveal" style="transition-delay: 200ms;">
+                <div class="flex text-gold mb-6 gap-1">
+                    ★★★★★
+                </div>
+                <p class="text-white/80 font-light text-sm leading-relaxed mb-8">"Excelente atendimento! A Fran é uma ótima profissional que me ajudou a encontrar o óculos perfeito com seu visagismo óptico. Ela foi muito atenciosa e paciente. Além disso, Raphael também foi muito atencioso. Recomendo muito!"</p>
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold to-dark flex items-center justify-center text-sm font-display">S</div>
+                    <div>
+                        <h5 class="font-medium text-sm">Suelem Martins</h5>
+                        <span class="text-white/40 text-xs">Cliente</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gold/5"></div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10 reveal">
+            <h2 class="font-display text-4xl md:text-6xl tracking-tight mb-6">Pronto para transformar <br><span class="italic text-gold">o seu olhar?</span></h2>
+            <p class="text-white/60 font-light text-lg mb-10">Agende seu horário via WhatsApp e venha tomar um café conosco no Centro de Curitiba.</p>
+            <a href="https://wa.me/554196314238" target="_blank" class="inline-flex items-center justify-center px-10 py-5 bg-white text-dark font-medium tracking-widest uppercase text-sm rounded-full hover:bg-gold transition-colors duration-300">
+                Falar no WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Localização -->
+    <section id="localizacao" class="py-32 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16 reveal">
+            <h2 class="font-display text-4xl md:text-5xl tracking-tight mb-4">Nossa <span class="italic text-gold">Localização</span></h2>
+            <p class="text-white/50 font-light max-w-xl mx-auto">Venha nos fazer uma visita e descubra a armação perfeita para você no coração de Curitiba.</p>
+        </div>
+        <div class="reveal glass-panel p-2 rounded-3xl overflow-hidden shadow-[0_0_30px_rgba(212,175,55,0.05)]">
+            <div class="w-full h-[450px] rounded-2xl overflow-hidden relative">
+                <iframe 
+                    src="https://maps.google.com/maps?q=Rua%20Conselheiro%20Ara%C3%BAjo,%20119,%20Curitiba&t=&z=18&ie=UTF8&iwloc=&output=embed" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0; filter: invert(90%) hue-rotate(180deg) brightness(85%) contrast(85%);" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-dark pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="md:col-span-2">
+                    <a href="#" class="font-cursive text-3xl tracking-wide text-gold block mb-6">
+                        Ótica Conselheiro CWB.
+                    </a>
+                    <p class="text-white/50 font-light text-sm max-w-sm">
+                        Especialistas em saúde visual e estética. Unindo precisão técnica e visagismo óptico para a escolha perfeita.
+                    </p>
+                </div>
+                <div>
+                    <h6 class="text-white font-medium tracking-widest uppercase text-xs mb-6">Contato</h6>
+                    <ul class="space-y-4 text-white/50 font-light text-sm">
+                        <li>Rua Conselheiro Araújo, 119</li>
+                        <li>Centro, Curitiba - PR</li>
+                        <li>CEP: 80060-230</li>
+                    </ul>
+                </div>
+                <div>
+                    <h6 class="text-white font-medium tracking-widest uppercase text-xs mb-6">Social</h6>
+                    <ul class="space-y-4 text-white/50 font-light text-sm">
+                        <li><a href="https://www.instagram.com/oticaconselheirocwb/" target="_blank" class="hover:text-gold transition-colors">Instagram</a></li>
+                        <li><a href="https://wa.me/554196314238" target="_blank" class="hover:text-gold transition-colors">WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-white/30 text-xs font-light">© 2026 Ótica Conselheiro. Todos os direitos reservados.</p>
+                <p class="text-white/30 text-xs font-light">Curitiba, Brasil</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Capybara -->
+    <a href="https://wa.me/554196314238" target="_blank" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-50 group hover:-translate-y-2 transition-transform duration-300" aria-label="Falar no WhatsApp">
+        <!-- Efeito de pulso (ping) -->
+        <div class="absolute inset-1 bg-[#25D366] rounded-full animate-ping opacity-60 -z-10"></div>
+        
+        <div class="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 -top-14 right-0 bg-dark border border-gold/30 text-white text-sm font-medium py-2 px-4 rounded-full whitespace-nowrap shadow-2xl pointer-events-none">
+            Fale com a gente! 🦫
+        </div>
+        <svg viewBox="0 0 512 512" class="w-16 h-16 md:w-20 md:h-20 drop-shadow-[0_4px_16px_rgba(37,211,102,0.4)] relative z-10" xmlns="http://www.w3.org/2000/svg">
+            <!-- Capybara Head Shape -->
+            <path d="M 100 400 
+                     C 100 250, 150 180, 200 160 
+                     C 220 80, 260 80, 280 160 
+                     C 350 160, 420 180, 450 220 
+                     C 480 260, 480 350, 450 380 
+                     C 420 410, 250 440, 100 400 Z" fill="#25D366" class="group-hover:fill-[#20BA59] transition-colors duration-300"/>
+            <!-- Eye -->
+            <path d="M 330 240 Q 360 220 390 240" stroke="#ffffff" stroke-width="20" stroke-linecap="round" fill="none"/>
+            <!-- Nostril -->
+            <circle cx="440" cy="330" r="16" fill="#ffffff"/>
+            <!-- WhatsApp Phone inside -->
+            <path d="M 220 260 C 200 260 180 280 180 300 C 180 380 260 460 340 460 C 360 460 380 440 380 420 L 340 380 C 330 370 320 370 310 380 L 290 400 C 260 380 240 360 220 330 L 240 310 C 250 300 250 290 240 280 L 220 260 Z" fill="#ffffff"/>
+        </svg>
+    </a>
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <script>
+        // Register ScrollTrigger
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('bg-dark/80');
+                header.classList.remove('bg-transparent');
+            } else {
+                header.classList.remove('bg-dark/80');
+                header.classList.add('bg-transparent');
+            }
+        });
+
+        // Hero Animation
+        const tl = gsap.timeline();
+        tl.from(".hero-elem", {
+            y: 40,
+            opacity: 0,
+            duration: 1.2,
+            stagger: 0.2,
+            ease: "power3.out",
+            delay: 0.2
+        });
+
+        // Scroll Reveal Animations
+        gsap.utils.toArray('.reveal').forEach(elem => {
+            gsap.from(elem, {
+                scrollTrigger: {
+                    trigger: elem,
+                    start: "top 85%",
+                    toggleActions: "play none none reverse"
+                },
+                y: 50,
+                opacity: 0,
+                duration: 1,
+                ease: "power3.out"
+            });
+        });
+
+        // Bento Cards Staggered Reveal
+        gsap.from(".bento-card", {
+            scrollTrigger: {
+                trigger: "#diferenciais",
+                start: "top 75%",
+            },
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.15,
+            ease: "power3.out"
+        });
+    </script>
+</body>
+</html>
