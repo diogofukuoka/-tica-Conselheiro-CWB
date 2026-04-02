@@ -10,6 +10,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- Custom Fonts -->
+    <style>
+        @font-face {
+            font-family: 'Addison Brother';
+            src: url('./AddisonBrother.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -28,7 +39,7 @@
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                         display: ['Playfair Display', 'serif'],
-                        cursive: ['Dancing Script', 'cursive'],
+                        cursive: ['"Addison Brother"', 'Dancing Script', 'cursive'],
                     },
                     letterSpacing: {
                         tightest: '-.04em',
@@ -119,21 +130,21 @@
 
     <!-- Header -->
     <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass-panel border-b-0" id="header">
-        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
-            <a href="#" class="flex items-center gap-3">
-                <span class="font-cursive text-3xl tracking-wide text-gold text-outline">
-                    Ótica Conselheiro CWB.
+        <div class="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 h-16 md:h-24 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-1 md:gap-3 shrink-0">
+                <span class="font-cursive text-xs sm:text-base md:text-3xl tracking-wide text-gold whitespace-nowrap">
+                    Ótica Conselheiro Cwb.
                 </span>
-                <img src="https://drive.google.com/thumbnail?id=1P_WCgbHIs9RCbFHlk2cpjvciQlFT0xK0&sz=w800" alt="Logo Ótica Conselheiro CWB" class="h-12 w-12 md:h-16 md:w-16 object-cover rounded-full border-2 border-gold" referrerpolicy="no-referrer" />
+                <img src="https://drive.google.com/thumbnail?id=1P_WCgbHIs9RCbFHlk2cpjvciQlFT0xK0&sz=w800" alt="Logo Ótica Conselheiro CWB" class="h-3 w-3 sm:h-6 sm:w-6 md:h-12 md:w-12 object-cover rounded-full border border-gold md:border-2 shrink-0" referrerpolicy="no-referrer" />
             </a>
             <nav class="hidden md:flex gap-8 text-sm font-medium tracking-widest uppercase text-white/90">
-                <a href="#diferenciais" class="hover:text-gold transition-colors text-outline">Diferenciais</a>
-                <a href="#servicos" class="hover:text-gold transition-colors text-outline">Serviços</a>
-                <a href="#depoimentos" class="hover:text-gold transition-colors text-outline">Depoimentos</a>
-                <a href="#localizacao" class="hover:text-gold transition-colors text-outline">Localização</a>
+                <a href="#diferenciais" class="hover:text-gold transition-colors">Diferenciais</a>
+                <a href="#servicos" class="hover:text-gold transition-colors">Serviços</a>
+                <a href="#depoimentos" class="hover:text-gold transition-colors">Depoimentos</a>
+                <a href="#localizacao" class="hover:text-gold transition-colors">Localização</a>
             </nav>
-            <a href="https://wa.me/554196314238" target="_blank" class="group relative px-6 py-3 text-sm font-medium tracking-widest uppercase overflow-hidden border border-gold/50 rounded-full hover:border-gold transition-colors">
-                <span class="relative z-10 text-gold group-hover:text-dark transition-colors duration-300 text-outline">Agendar Visita</span>
+            <a href="https://wa.me/554196314238" target="_blank" class="group relative px-2 py-1.5 md:px-6 md:py-3 text-[9px] md:text-sm font-medium tracking-widest uppercase overflow-hidden border border-gold/50 rounded-full hover:border-gold transition-colors shrink-0 ml-1">
+                <span class="relative z-10 text-gold group-hover:text-dark transition-colors duration-300">Agendar</span>
                 <div class="absolute inset-0 bg-gold translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
             </a>
         </div>
@@ -149,12 +160,12 @@
         </div>
 
         <div class="relative z-10 max-w-5xl mx-auto px-6 text-center mt-20">
-            <p class="hero-elem text-gold text-sm md:text-base font-medium tracking-[0.3em] uppercase mb-6 text-outline">SAÚDE VISUAL &amp; IMAGEM</p>
-            <h1 class="hero-elem font-display text-5xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tightest mb-8 text-gradient text-outline-filter">
+            <p class="hero-elem text-gold text-sm md:text-base font-medium tracking-[0.3em] uppercase mb-6">SAÚDE VISUAL &amp; IMAGEM</p>
+            <h1 class="hero-elem font-display text-5xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tightest mb-8 text-gradient">
                 A harmonia perfeita <br>
                 <span class="italic font-light text-white/80">entre visão e estética.</span>
             </h1>
-            <p class="hero-elem text-lg md:text-xl text-white/90 font-light max-w-2xl mx-auto mb-12 leading-relaxed text-outline">
+            <p class="hero-elem text-lg md:text-xl text-white/90 font-light max-w-2xl mx-auto mb-12 leading-relaxed">
                 Descubra o poder do Visagismo Óptico. Curadoria exclusiva de armações e lentes de alta tecnologia no coração de Curitiba.
             </p>
             <div class="hero-elem flex flex-col sm:flex-row items-center justify-center gap-6">
